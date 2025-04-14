@@ -1,0 +1,57 @@
+/* Contenedor de la tarjeta */
+.card-container {
+position: relative;
+width: 100%;
+padding-bottom: 100%; /* Relación de aspecto 1:1 (cuadrada) */
+}
+
+/* Tarjeta personalizada */
+.custom-card {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 0;
+overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+padding:3%;
+margin: 0;
+
+}
+
+.custom-card {
+    min-height: 120px; /* Ajusta este valor a lo que necesites */
+    max-height: 120px; /* Ajusta este valor a lo que necesites */
+    min-width: 120px; /* Ajusta este valor a lo que necesites */    
+    max-width: 120px; /* Ajusta este valor a lo que necesites */
+}
+
+.card-container {
+    aspect-ratio: 1 / 1; /* Alternativa moderna */
+  }
+
+/* Imagen de la tarjeta */
+.custom-card-img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Asegura que la imagen llene el contenedor sin deformarse */
+border-radius: 0;
+}
+
+/* Superposición para el texto en dispositivos móviles */
+.card-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(255, 255, 255, 0.75);
+padding: 0.5rem;
+display: none; /* Oculto por defecto */
+}
+
+/* Mostrar superposición solo en pantallas pequeñas */
+@media (max-width: 768px) {
+.card-overlay {
+display: block;
+}
+}
